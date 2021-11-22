@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
+*, *::after, *::before {
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.quiz-container {
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.question-box {
+  /* display: flex;
+  flex-direction: column; */
+  background-color: hsl(200, 80%, 80%);
+  padding: 10px;
+  margin: 0px 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 0px hsl(200, 50%, 50%);
+  transition: 1s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.question-box:hover {
+  background-color: hsl(200, 80%, 60%);
+  box-shadow: 2px 6px 8px 0px hsl(200, 35%, 80%);
+  transform: translateY(-5px);
 }
 
-.App-link {
-  color: #61dafb;
+.question-btn {
+  display: inline;
+  /* display: flex;
+  flex-direction: row; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.question-btn > button {
+  /* display: flex;
+  flex-direction: row; */
+  /* flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start; */
+
+  border: 2px solid white;
+  color: hsl(200, 50%, 50%);
+  margin: 5px 0;
+  margin-right: 5px;
+  /* margin-top: 5px;
+  margin-right: 5px; */
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 3px 0 hsl(200, 80%, 60%);
+}
+.question-btn > button:hover {
+  /* box-sizing: border-box; */
+  font-weight: bold;
 }
